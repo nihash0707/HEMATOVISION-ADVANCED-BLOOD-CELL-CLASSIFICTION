@@ -1,0 +1,55 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-color: #87ceeb;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .result-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            color: darkred;
+        }
+        p {
+            font-size: 18px;
+            color: #2c3e50;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            margin-bottom: 15px;
+        }
+        a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Prediction Result</h2>
+        <p><strong>Predicted Cell Type:</strong> {{ class_label }}</p>
+        <img src="data:image/png;base64,{{ img_data }}" alt="Uploaded Cell Image">
+        <br>
+        <a href="/">Try Another</a>
+    </div>
+</body>
+</html>
